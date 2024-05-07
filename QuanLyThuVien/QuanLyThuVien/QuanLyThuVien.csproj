@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{792EB880-B483-4362-8844-7960A5AFE294}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyThuVien</RootNamespace>
+    <AssemblyName>QuanLyThuVien</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>adminDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginSV.Designer.cs">
+      <DependentUpon>loginSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLSach.Designer.cs">
+      <DependentUpon>QLSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTTNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTTNV.Designer.cs">
+      <DependentUpon>UpdateTTNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoDocGia.Designer.cs">
+      <DependentUpon>BaoCaoDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoSach.Designer.cs">
+      <DependentUpon>BaoCaoSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiemDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiemDocGia.Designer.cs">
+      <DependentUpon>TimKiemDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSach.Designer.cs">
+      <DependentUpon>UpdateSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTacGia.Designer.cs">
+      <DependentUpon>UpdateTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateNXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateNXB.Designer.cs">
+      <DependentUpon>UpdateNXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiemSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiemSach.Designer.cs">
+      <DependentUpon>TimKiemSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTTDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTTDocGia.Designer.cs">
+      <DependentUpon>UpdateTTDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLMuonTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLMuonTraSach.Designer.cs">
+      <DependentUpon>QLMuonTraSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="themsuaxoa.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginSV.resx">
+      <DependentUpon>loginSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLSach.resx">
+      <DependentUpon>QLSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTTNV.resx">
+      <DependentUpon>UpdateTTNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoDocGia.resx">
+      <DependentUpon>BaoCaoDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoSach.resx">
+      <DependentUpon>BaoCaoSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimKiemDocGia.resx">
+      <DependentUpon>TimKiemDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSach.resx">
+      <DependentUpon>UpdateSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTacGia.resx">
+      <DependentUpon>UpdateTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateNXB.resx">
+      <DependentUpon>UpdateNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimKiemSach.resx">
+      <DependentUpon>TimKiemSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTTDocGia.resx">
+      <DependentUpon>UpdateTTDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLMuonTraSach.resx">
+      <DependentUpon>QLMuonTraSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="adminDataSet.xsc">
+      <DependentUpon>adminDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="adminDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>adminDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="adminDataSet.xss">
+      <DependentUpon>adminDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGL-THUVIEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-uneti-VER2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-uneti-VER3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
