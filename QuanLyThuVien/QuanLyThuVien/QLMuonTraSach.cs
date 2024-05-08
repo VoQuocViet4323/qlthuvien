@@ -75,9 +75,7 @@ namespace QuanLyThuVien
 
         }
 
-        
-
-        private string connectionString = @"Data Source=LAPTOP-M82ODDR5;Initial Catalog=PHANMEM;Integrated Security=True;";
+        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
 
         private void btnShow_Click(object sender, EventArgs e)
         {
@@ -459,6 +457,11 @@ namespace QuanLyThuVien
             {
                 MessageBox.Show("Lỗi khi hiển thị thông tin hàng: " + ex.Message);
             }
+
+        }
+
+        private void tablePM_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

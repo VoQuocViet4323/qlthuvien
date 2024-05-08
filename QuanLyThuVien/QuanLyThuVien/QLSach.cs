@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -59,7 +60,7 @@ namespace QuanLyThuVien
 
         }
 
-        private string connectionString = @"Data Source=LAPTOP-M82ODDR5;Initial Catalog=PHANMEM;Integrated Security=True;";
+        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         private void btnShow_Click(object sender, EventArgs e)
         {
             try
