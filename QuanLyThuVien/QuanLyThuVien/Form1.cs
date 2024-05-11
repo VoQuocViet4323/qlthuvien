@@ -43,8 +43,7 @@ namespace QuanLyThuVien
         // this : truyen form 1 vao form 2 
         private void OpenForm2()
         {
-
-            Form2 form2 = new Form2(this);
+            Login form2 = new Login(this);
             form2.ShowDialog();
         }
 

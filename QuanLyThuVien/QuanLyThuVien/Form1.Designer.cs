@@ -164,7 +164,7 @@
             this.btnDocGia.Name = "btnDocGia";
             this.btnDocGia.Size = new System.Drawing.Size(184, 60);
             this.btnDocGia.TabIndex = 9;
-            this.btnDocGia.Text = "Độc giả";
+            this.btnDocGia.Text = "Quản lý độc giả";
             this.btnDocGia.UseVisualStyleBackColor = true;
             this.btnDocGia.Click += new System.EventHandler(this.btnDocGia_Click);
             // 
@@ -180,7 +180,7 @@
             this.btnQuanLyPhieu.Name = "btnQuanLyPhieu";
             this.btnQuanLyPhieu.Size = new System.Drawing.Size(184, 60);
             this.btnQuanLyPhieu.TabIndex = 8;
-            this.btnQuanLyPhieu.Text = "Quản lý phiếu";
+            this.btnQuanLyPhieu.Text = "Quản lý thủ thư";
             this.btnQuanLyPhieu.UseVisualStyleBackColor = true;
             this.btnQuanLyPhieu.Click += new System.EventHandler(this.btnQuanLyPhieu_Click);
             // 

@@ -36,14 +36,11 @@ C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\Qua
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.AssemblyReference.cache
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form1.resources
-C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.loginSV.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLSach.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UpdateTTNV.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.BaoCaoDocGia.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.BaoCaoSach.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.TimKiemDocGia.resources
-C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form2.resources
-C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form3.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UpdateSach.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UpdateTacGia.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UpdateNXB.resources
@@ -56,3 +53,6 @@ C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\Qua
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyTh.B5137F7B.Up2Date
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Login.resources
+C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Register.resources
+C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.SuaPhieuTra.resources

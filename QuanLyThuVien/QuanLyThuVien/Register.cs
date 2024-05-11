@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    public partial class Form3 : Form
+    public partial class Register : Form
     {
         private Form1 _form1;
-        public Form3(Form1 form1)
+        public Register(Form1 form1)
         {
             InitializeComponent();
             _form1 = form1;
@@ -72,7 +72,7 @@ namespace QuanLyThuVien
                                     this.Hide();
 
                                     // Mở form mới
-                                    Form2 form2 = new Form2(_form1);
+                                    Login form2 = new Login(_form1);
                                     form2.ShowDialog();
                                 }
                                 else
@@ -184,7 +184,7 @@ namespace QuanLyThuVien
                                     this.Hide();
 
                                     // Mở form mới
-                                    Form2 form2 = new Form2(_form1);
+                                    Login form2 = new Login(_form1);
                                     form2.ShowDialog();
                                 }
                                 else
@@ -228,7 +228,7 @@ namespace QuanLyThuVien
         private void label3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 f = new Form2(_form1);
+            Login f = new Login(_form1);
             f.ShowDialog();
             
         }

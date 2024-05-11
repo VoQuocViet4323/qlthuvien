@@ -247,7 +247,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(587, 228);
             this.dataGridView1.TabIndex = 28;
             // 
-            // Form8
+            // UpdateTTDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,9 +256,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form8";
+            this.Name = "UpdateTTDocGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form độc giả";
+            this.Text = "z";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

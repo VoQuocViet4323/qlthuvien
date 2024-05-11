@@ -14,10 +14,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Text.RegularExpressions;
 namespace QuanLyThuVien
 {
-    public partial class Form2 : Form
+    public partial class Login : Form
     {
         private Form1 _form1;
-        public Form2(Form1 form1)
+        public Login(Form1 form1)
         {
             InitializeComponent();
             this.KeyPreview = true;
@@ -32,7 +32,7 @@ namespace QuanLyThuVien
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 frm3 = new Form3(_form1);
+            Register frm3 = new Register(_form1);
             frm3.ShowDialog();
             frm3 = null;
             this.Show();
@@ -58,12 +58,12 @@ namespace QuanLyThuVien
         {
             if (e.KeyCode == Keys.Enter) // Kiểm tra nếu phím được nhấn là Enter
             {
-                Login(); // Gọi phương thức đăng nhập
+                Loginn(); // Gọi phương thức đăng nhập
             }
         }
 
         // Phương thức đăng nhập
-        private void Login()
+        private void Loginn()
         {
             try
             {
@@ -158,13 +158,13 @@ namespace QuanLyThuVien
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            Login();
+            Loginn();
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 f = new Form3(_form1);
+            Register f = new Register(_form1);
             f.ShowDialog();
         }
     }

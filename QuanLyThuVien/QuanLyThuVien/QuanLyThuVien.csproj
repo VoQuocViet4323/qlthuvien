@@ -73,17 +73,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginSV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="loginSV.Designer.cs">
-      <DependentUpon>loginSV.cs</DependentUpon>
-    </Compile>
     <Compile Include="QLSach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QLSach.Designer.cs">
       <DependentUpon>QLSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaPhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaPhieuTra.Designer.cs">
+      <DependentUpon>SuaPhieuTra.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateTTNV.cs">
       <SubType>Form</SubType>
@@ -109,17 +109,17 @@
     <Compile Include="TimKiemDocGia.Designer.cs">
       <DependentUpon>TimKiemDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateSach.cs">
       <SubType>Form</SubType>
@@ -163,11 +163,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginSV.resx">
-      <DependentUpon>loginSV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QLSach.resx">
       <DependentUpon>QLSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaPhieuTra.resx">
+      <DependentUpon>SuaPhieuTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateTTNV.resx">
       <DependentUpon>UpdateTTNV.cs</DependentUpon>
@@ -181,11 +181,11 @@
     <EmbeddedResource Include="TimKiemDocGia.resx">
       <DependentUpon>TimKiemDocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateSach.resx">
       <DependentUpon>UpdateSach.cs</DependentUpon>
