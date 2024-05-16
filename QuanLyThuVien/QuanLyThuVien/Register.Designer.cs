@@ -236,6 +236,7 @@
             this.txtRepassword.Size = new System.Drawing.Size(217, 31);
             this.txtRepassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtRepassword.TabIndex = 16;
+            this.txtRepassword.TextChanged += new System.EventHandler(this.txtRepassword_TextChanged);
             // 
             // txtPassword
             // 
@@ -340,10 +341,11 @@
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(461, 515);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // Form3
+            // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -357,7 +359,7 @@
             this.Controls.Add(this.panel5);
             this.ForeColor = System.Drawing.Color.Red;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form3";
+            this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.panel1.ResumeLayout(false);

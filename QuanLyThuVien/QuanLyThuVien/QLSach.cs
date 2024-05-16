@@ -184,12 +184,13 @@ namespace QuanLyThuVien
         {
             try
             {
-                // Kiểm tra xem trường mã sách có đang được sửa không
-                if (isMaSachEdited)
-                {
-                    MessageBox.Show("Không được phép thay đổi 'Mã sách' !");
-                    return;
-                }
+                //// Kiểm tra xem trường mã sách có đang được sửa không
+                //if (isMaSachEdited)
+                //{
+                //    MessageBox.Show("Không được phép thay đổi 'Mã sách' !");
+                //    return;
+                //}
+
                 //kiểm tra các textbox đã nhập chưa!
                 if (string.IsNullOrEmpty(txtMaSach.Text))
                 {
@@ -378,10 +379,40 @@ namespace QuanLyThuVien
             txtGia.Text = "";
             txtTenTG.Text = "";
         }
-        private bool isMaSachEdited = false;
+
+        private bool isMaSachEdited = true;
+
+        // Định nghĩa thuộc tính originalMaSach
+        public string originalMaSach
+        {
+            // Getter: Lấy giá trị của txtMaSach.Text
+            get => txtMaSach.Text;
+
+            // Setter: Đặt giá trị cho txtMaSach.Text
+            set => txtMaSach.Text = value;
+        }
+
         private void txtMaSach_TextChanged(object sender, EventArgs e)
         {
-            isMaSachEdited = true;
+            // So sánh giá trị hiện tại với giá trị ban đầu
+            if (txtMaSach.Text != originalMaSach)
+            {
+                isMaSachEdited = false;
+            }
+            else
+            {
+                isMaSachEdited = true;
+            } 
+        }
+
+        private void txtTenSach_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtLoaiSach_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -227,7 +227,6 @@ namespace QuanLyThuVien
         {
             try
             {
-
                 // Kiểm tra xem các giá trị cần thiết đã được chọn hay không
                 if (string.IsNullOrEmpty(cbbMaPM.Text) || string.IsNullOrEmpty(cbbMaDG.Text) || string.IsNullOrEmpty(cbbMaSach.Text) || string.IsNullOrEmpty(cbbMaTT.Text))
                 {
@@ -241,7 +240,7 @@ namespace QuanLyThuVien
                     connection.Open();
 
                     // Thực hiện truy vấn UPDATE để cập nhật thông tin của phiếu mượn
-                    string updateQuery = @"UPDATE PHIEUTRA SET MAPM = @maPM, MADOCGIA = @madocgia, MATHUTHU = @mathuthu, MASACH = @masach, NGAYTRA = @ngayhentra, PHITREHAN = @phitrehan, TRANGTHAI = @trangthai WHERE MAPT = @maPT";
+                    string updateQuery = @"UPDATE PHIEUTRA SET MADOCGIA = @madocgia, MATHUTHU = @mathuthu, MASACH = @masach, NGAYTRA = @ngayhentra, PHITREHAN = @phitrehan, TRANGTHAI = @trangthai WHERE MAPT = @maPT";
                     using (SqlCommand command = new SqlCommand(updateQuery, connection))
                     {
                         command.Parameters.AddWithValue("@maPT", txtMaPT.Text);

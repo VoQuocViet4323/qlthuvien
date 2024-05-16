@@ -18,7 +18,6 @@ namespace QuanLyThuVien
             InitializeComponent();
         }
         private Form1 form1;
-
         private Form currentFormChild;
         private Form1 _form1;
 
@@ -103,8 +102,7 @@ namespace QuanLyThuVien
             btnThongKe.Enabled = true;
             btnLogout.Enabled = true;
             btnLogout.Visible = true;
-            iconLogout.Enabled = true;
-            iconLogout.Visible = true; 
+            btnQLHT.Enabled = true;
             btnLogin.Visible = false;
         }
 
@@ -147,6 +145,7 @@ namespace QuanLyThuVien
             OpenChildForm(new QLMuonTraSach());
         }
 
+        //Quản lý thủ thư
         private void btnQuanLyPhieu_Click(object sender, EventArgs e)
         {
 
@@ -172,6 +171,17 @@ namespace QuanLyThuVien
             this.Hide();
             OpenForm2();
             this.Show();
+        }
+
+        private void btnQLHT_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new QLHT_Login());
+        }
+
+        //nút thoát form1
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

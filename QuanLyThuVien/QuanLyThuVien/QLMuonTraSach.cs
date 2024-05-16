@@ -15,6 +15,7 @@ namespace QuanLyThuVien
 {
     public partial class QLMuonTraSach : Form
     {
+        private bool isUpdatingDate = false;
         private QLMuonTraSach formQL;
         public void UpdateDataGridViewFromDatabase()
         {
@@ -48,6 +49,9 @@ namespace QuanLyThuVien
             GetMaDocGiaFromDbs();
             GETMaSachFromDbs();
             GetMaThuThuFromDbs();
+            dateNgayMuon.ValueChanged += dateNgayMuon_ValueChanged;
+            dateNgayTra.ValueChanged += dateNgayTra_ValueChanged;
+            UpdateRecordCountLabel();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -66,7 +70,39 @@ namespace QuanLyThuVien
 
         private void Form9_Load(object sender, EventArgs e)
         {
+            UpdateRecordCountLabel();
+        }
 
+        private void UpdateRecordCountLabel()
+        {
+            try
+            {
+                // Chuỗi kết nối từ cấu hình
+                string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+
+                // Tạo câu truy vấn SQL để đếm tổng số bản ghi trong bảng PHIEUMUON
+                string query = "SELECT COUNT(*) FROM PHIEUMUON";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    // Tạo lệnh SQL
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Mở kết nối
+                        connection.Open();
+
+                        // Thực thi lệnh và lấy kết quả
+                        int recordCount = (int)command.ExecuteScalar();
+
+                        // Hiển thị số lượng bản ghi trong Label
+                        lblContPM.Text = recordCount.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi đếm số lượng bản ghi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -211,7 +247,6 @@ namespace QuanLyThuVien
                     }
                 }
             }
-
             // Trả về danh sách danh mục đã lấy được từ cơ sở dữ liệu
             return msList;
         }
@@ -305,7 +340,7 @@ namespace QuanLyThuVien
                     connection.Open();
 
                     // Xóa dữ liệu từ cơ sở dữ liệu dựa trên mã phiếu mượn đã chọn
-                    string delQuery = "DELETE FROM PHIEUMUON WHERE MAPM = @maPM";
+                    string delQuery = "DECLARE @maphieu NVARCHAR(50) SET @maphieu = @maPM DELETE FROM PHIEUTRA WHERE MAPM = @maphieu DELETE FROM PHIEUMUON WHERE MAPM = @maPM";
                     using (SqlCommand command = new SqlCommand(delQuery, connection))
                     {
                         command.Parameters.AddWithValue("@maPM", maPhieuMuon);
@@ -320,6 +355,7 @@ namespace QuanLyThuVien
             {
                 MessageBox.Show("Lỗi khi xóa dữ liệu: " + ex.Message);
             }
+            UpdateRecordCountLabel();
         }
 
         private void btnThem_Click_1(object sender, EventArgs e)
@@ -397,6 +433,7 @@ namespace QuanLyThuVien
             {
                 MessageBox.Show("Lỗi khi thêm dữ liệu: " + ex.Message);
             }
+            UpdateRecordCountLabel();
         }
 
         private void btnShow_Click_1(object sender, EventArgs e)
@@ -673,6 +710,77 @@ namespace QuanLyThuVien
                     tablePT.DataSource = dataTable;
                 }
             }
+        }
+
+        private void tablePM_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateNgayTra_ValueChanged(object sender, EventArgs e)
+        {
+            if (isUpdatingDate)
+                return;
+
+            // Lấy giá trị ngày mượn và ngày trả
+            DateTime ngayMuon = dateNgayMuon.Value;
+            DateTime ngayTra = dateNgayTra.Value;
+
+            try
+            {
+                // Kiểm tra nếu ngày trả nhỏ hơn ngày mượn
+                if (ngayTra < ngayMuon)
+                {
+                    // Hiển thị thông báo lỗi
+                    MessageBox.Show("Ngày trả phải sau ngày mượn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    isUpdatingDate = true;
+                    // Gán lại ngày trả bằng ngày mượn
+                    dateNgayTra.Value = ngayMuon;
+                    isUpdatingDate = false;
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo nếu có lỗi xảy ra
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void dateNgayMuon_ValueChanged(object sender, EventArgs e)
+        {
+            if (isUpdatingDate)
+                return;
+
+            // Lấy giá trị ngày mượn và ngày trả
+            DateTime ngayMuon = dateNgayMuon.Value;
+            DateTime ngayTra = dateNgayTra.Value;
+
+            // Kiểm tra nếu ngày mượn lớn hơn ngày trả
+            if (ngayMuon > ngayTra)
+            {
+                MessageBox.Show("Ngày trả phải sau ngày mượn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isUpdatingDate = true;
+                dateNgayMuon.Value = DateTime.Today;
+                isUpdatingDate = false;
+            }
+        }
+
+        private void dateNgayTra_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+        
+        //tổng số lượng sách đang mượn
+        private void label13_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblContPM_TextChanged(object sender, EventArgs e)
+        {
+            UpdateRecordCountLabel();
         }
     }
 }

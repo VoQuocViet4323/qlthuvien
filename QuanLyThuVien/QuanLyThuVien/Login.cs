@@ -17,6 +17,7 @@ namespace QuanLyThuVien
     public partial class Login : Form
     {
         private Form1 _form1;
+
         public Login(Form1 form1)
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace QuanLyThuVien
             this.KeyDown += new KeyEventHandler(Form_KeyDown);
             this.KeyPreview = true;
         }
+
         private void label1_Click(object sender, EventArgs e)
         {
 

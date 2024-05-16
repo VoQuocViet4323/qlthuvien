@@ -3,11 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\suaphieutra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\suaphieutra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\quanlythuvien\\qlmuontrasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\qlmuontrasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\qlmuontrasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,12 +11,36 @@
       "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\qlmuontrasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\quanlythuvien\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\thaydoithongtintk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\thaydoithongtintk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\suaphieutra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\suaphieutra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\quanlythuvien\\qlsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\qlsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\qlht_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\qlht_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\qlht_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\qlht_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\admin\\onedrive\\documents\\visual studio 2022\\qlthuvien\\quanlythuvien\\quanlythuvien\\thaydoithongtintk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{792EB880-B483-4362-8844-7960A5AFE294}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\thaydoithongtintk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,64 +66,127 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SuaPhieuTra.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\SuaPhieuTra.cs",
-              "RelativeDocumentMoniker": "QuanLyThuVien\\SuaPhieuTra.cs",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\SuaPhieuTra.cs",
-              "RelativeToolTip": "QuanLyThuVien\\SuaPhieuTra.cs",
-              "ViewState": "AQIAAPUAAAAAAAAAAAAgwA8BAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T18:06:52.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SuaPhieuTra.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\SuaPhieuTra.cs",
-              "RelativeDocumentMoniker": "QuanLyThuVien\\SuaPhieuTra.cs",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\SuaPhieuTra.cs [Design]",
-              "RelativeToolTip": "QuanLyThuVien\\SuaPhieuTra.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T16:44:47.014Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "QLMuonTraSach.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLMuonTraSach.cs",
               "RelativeDocumentMoniker": "QuanLyThuVien\\QLMuonTraSach.cs",
               "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLMuonTraSach.cs [Design]",
               "RelativeToolTip": "QuanLyThuVien\\QLMuonTraSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T03:18:08.591Z",
+              "WhenOpened": "2024-05-16T17:50:20.124Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "QLMuonTraSach.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLMuonTraSach.cs",
               "RelativeDocumentMoniker": "QuanLyThuVien\\QLMuonTraSach.cs",
               "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLMuonTraSach.cs",
               "RelativeToolTip": "QuanLyThuVien\\QLMuonTraSach.cs",
-              "ViewState": "AQIAAFkCAAAAAAAAAAAmwG4CAAAgAAAA",
+              "ViewState": "AQIAAJQBAAAAAAAAAAAlwJ0BAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T10:57:00.1Z",
+              "WhenOpened": "2024-05-14T02:52:17.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
+              "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\Form1.cs",
               "RelativeDocumentMoniker": "QuanLyThuVien\\Form1.cs",
-              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\Form1.cs [Design]",
-              "RelativeToolTip": "QuanLyThuVien\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\Form1.cs",
+              "RelativeToolTip": "QuanLyThuVien\\Form1.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAowCwAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T08:52:05.906Z",
+              "WhenOpened": "2024-05-16T17:22:31.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThayDoiThongTinTK.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\ThayDoiThongTinTK.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\ThayDoiThongTinTK.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\ThayDoiThongTinTK.cs",
+              "RelativeToolTip": "QuanLyThuVien\\ThayDoiThongTinTK.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAawF4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T16:54:34.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QLHT_Login.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLHT_Login.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\QLHT_Login.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLHT_Login.cs",
+              "RelativeToolTip": "QuanLyThuVien\\QLHT_Login.cs",
+              "ViewState": "AQIAAKcAAAAAAAAAAAAAwLQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T16:54:23.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\Register.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\Register.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\Register.cs",
+              "RelativeToolTip": "QuanLyThuVien\\Register.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAawFwAAACJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T16:53:30.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Register.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\Register.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\Register.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\Register.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\Register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T16:53:26.838Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ThayDoiThongTinTK.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\ThayDoiThongTinTK.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\ThayDoiThongTinTK.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\ThayDoiThongTinTK.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\ThayDoiThongTinTK.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T15:33:40.076Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "QLHT_Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLHT_Login.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\QLHT_Login.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLHT_Login.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\QLHT_Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T14:31:41.991Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "QLSach.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLSach.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\QLSach.cs",
+              "ToolTip": "C:\\Users\\admin\\OneDrive\\Documents\\Visual Studio 2022\\qlthuvien\\QuanLyThuVien\\QuanLyThuVien\\QLSach.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\QLSach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T16:39:25.351Z",
               "EditorCaption": " [Design]"
             }
           ]

@@ -73,6 +73,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLHT_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLHT_Login.Designer.cs">
+      <DependentUpon>QLHT_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="SuaPhieuTra.Designer.cs">
       <DependentUpon>SuaPhieuTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThayDoiThongTinTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThayDoiThongTinTK.Designer.cs">
+      <DependentUpon>ThayDoiThongTinTK.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateTTNV.cs">
       <SubType>Form</SubType>
@@ -163,11 +175,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLHT_Login.resx">
+      <DependentUpon>QLHT_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLSach.resx">
       <DependentUpon>QLSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SuaPhieuTra.resx">
       <DependentUpon>SuaPhieuTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThayDoiThongTinTK.resx">
+      <DependentUpon>ThayDoiThongTinTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateTTNV.resx">
       <DependentUpon>UpdateTTNV.cs</DependentUpon>

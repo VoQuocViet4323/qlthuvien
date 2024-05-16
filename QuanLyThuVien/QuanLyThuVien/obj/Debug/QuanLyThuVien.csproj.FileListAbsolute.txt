@@ -56,3 +56,5 @@ C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\Qua
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Login.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Register.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.SuaPhieuTra.resources
+C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLHT_Login.resources
+C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThayDoiThongTinTK.resources
