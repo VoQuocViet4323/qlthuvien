@@ -110,7 +110,7 @@ namespace QuanLyThuVien
         {
             try
             {
-                // Đóng Form2
+                // Đóng Form Login
                 this.Close();
 
                 // Hiển thị lại Form1
@@ -153,7 +153,7 @@ namespace QuanLyThuVien
 
         private void btnDocGia_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new QLTTDocGia());
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
@@ -183,5 +183,7 @@ namespace QuanLyThuVien
         {
 
         }
+
+        
     }
 }
