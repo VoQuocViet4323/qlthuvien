@@ -135,7 +135,7 @@
             this.txtMaPT.PlaceholderText = "";
             this.txtMaPT.SelectedText = "";
             this.txtMaPT.Size = new System.Drawing.Size(117, 36);
-            this.txtMaPT.TabIndex = 7;
+            this.txtMaPT.TabIndex = 1;
             // 
             // cbbMaDG
             // 
@@ -151,7 +151,7 @@
             this.cbbMaDG.Name = "cbbMaDG";
             this.cbbMaDG.Size = new System.Drawing.Size(117, 36);
             this.cbbMaDG.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.cbbMaDG.TabIndex = 8;
+            this.cbbMaDG.TabIndex = 5;
             // 
             // cbbMaTT
             // 
@@ -166,7 +166,7 @@
             this.cbbMaTT.Location = new System.Drawing.Point(190, 250);
             this.cbbMaTT.Name = "cbbMaTT";
             this.cbbMaTT.Size = new System.Drawing.Size(117, 36);
-            this.cbbMaTT.TabIndex = 9;
+            this.cbbMaTT.TabIndex = 3;
             // 
             // cbbMaSach
             // 
@@ -181,7 +181,7 @@
             this.cbbMaSach.Location = new System.Drawing.Point(447, 250);
             this.cbbMaSach.Name = "cbbMaSach";
             this.cbbMaSach.Size = new System.Drawing.Size(117, 36);
-            this.cbbMaSach.TabIndex = 10;
+            this.cbbMaSach.TabIndex = 7;
             // 
             // dateTra
             // 
@@ -195,7 +195,7 @@
             this.dateTra.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTra.Name = "dateTra";
             this.dateTra.Size = new System.Drawing.Size(219, 36);
-            this.dateTra.TabIndex = 12;
+            this.dateTra.TabIndex = 4;
             this.dateTra.Value = new System.DateTime(2024, 5, 11, 21, 52, 54, 484);
             // 
             // txtPhiTre
@@ -215,7 +215,7 @@
             this.txtPhiTre.PlaceholderText = "";
             this.txtPhiTre.SelectedText = "";
             this.txtPhiTre.Size = new System.Drawing.Size(117, 36);
-            this.txtPhiTre.TabIndex = 13;
+            this.txtPhiTre.TabIndex = 6;
             // 
             // btnFix
             // 
@@ -230,7 +230,7 @@
             this.btnFix.Location = new System.Drawing.Point(447, 316);
             this.btnFix.Name = "btnFix";
             this.btnFix.Size = new System.Drawing.Size(117, 36);
-            this.btnFix.TabIndex = 14;
+            this.btnFix.TabIndex = 8;
             this.btnFix.Text = "Sửa";
             this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
             // 
@@ -270,7 +270,7 @@
             this.cbbMaPM.Location = new System.Drawing.Point(190, 185);
             this.cbbMaPM.Name = "cbbMaPM";
             this.cbbMaPM.Size = new System.Drawing.Size(117, 36);
-            this.cbbMaPM.TabIndex = 17;
+            this.cbbMaPM.TabIndex = 2;
             // 
             // SuaPhieuTra
             // 

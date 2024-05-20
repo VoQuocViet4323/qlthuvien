@@ -91,7 +91,7 @@
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(200, 28);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             // 
             // guna2HtmlLabel2
             // 
@@ -127,7 +127,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(317, 227);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(110, 40);
-            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Cập Nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -149,7 +149,7 @@
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(6, 227);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(20, 22);
-            this.guna2HtmlLabel4.TabIndex = 0;
+            this.guna2HtmlLabel4.TabIndex = 8;
             this.guna2HtmlLabel4.Text = "ID";
             this.guna2HtmlLabel4.Visible = false;
             // 
@@ -192,7 +192,7 @@
             this.txtConfirm.PlaceholderText = "";
             this.txtConfirm.SelectedText = "";
             this.txtConfirm.Size = new System.Drawing.Size(200, 28);
-            this.txtConfirm.TabIndex = 9;
+            this.txtConfirm.TabIndex = 3;
             this.txtConfirm.TextChanged += new System.EventHandler(this.txtConfirm_TextChanged);
             // 
             // guna2HtmlLabel5

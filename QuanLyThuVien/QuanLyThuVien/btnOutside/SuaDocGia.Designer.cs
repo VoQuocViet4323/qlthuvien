@@ -71,7 +71,7 @@
             this.btnSua.Location = new System.Drawing.Point(472, 235);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 40);
-            this.btnSua.TabIndex = 32;
+            this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -152,7 +152,7 @@
             this.txtMaDG.PlaceholderText = "";
             this.txtMaDG.SelectedText = "";
             this.txtMaDG.Size = new System.Drawing.Size(200, 30);
-            this.txtMaDG.TabIndex = 24;
+            this.txtMaDG.TabIndex = 1;
             this.txtMaDG.TextChanged += new System.EventHandler(this.txtMaDG_TextChanged);
             // 
             // txtHoTen
@@ -172,7 +172,7 @@
             this.txtHoTen.PlaceholderText = "";
             this.txtHoTen.SelectedText = "";
             this.txtHoTen.Size = new System.Drawing.Size(200, 30);
-            this.txtHoTen.TabIndex = 25;
+            this.txtHoTen.TabIndex = 2;
             // 
             // txtSDT
             // 
@@ -191,7 +191,7 @@
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
             this.txtSDT.Size = new System.Drawing.Size(200, 30);
-            this.txtSDT.TabIndex = 26;
+            this.txtSDT.TabIndex = 4;
             // 
             // txtEmail
             // 
@@ -210,7 +210,7 @@
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(200, 30);
-            this.txtEmail.TabIndex = 27;
+            this.txtEmail.TabIndex = 7;
             // 
             // txtAddress
             // 
@@ -229,7 +229,7 @@
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(200, 30);
-            this.txtAddress.TabIndex = 28;
+            this.txtAddress.TabIndex = 3;
             // 
             // dateNgaySinh
             // 
@@ -244,7 +244,7 @@
             this.dateNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgaySinh.Name = "dateNgaySinh";
             this.dateNgaySinh.Size = new System.Drawing.Size(200, 36);
-            this.dateNgaySinh.TabIndex = 29;
+            this.dateNgaySinh.TabIndex = 6;
             this.dateNgaySinh.Value = new System.DateTime(2024, 5, 17, 22, 15, 11, 477);
             // 
             // cbbGender
@@ -260,7 +260,7 @@
             this.cbbGender.Location = new System.Drawing.Point(432, 56);
             this.cbbGender.Name = "cbbGender";
             this.cbbGender.Size = new System.Drawing.Size(140, 36);
-            this.cbbGender.TabIndex = 30;
+            this.cbbGender.TabIndex = 5;
             this.cbbGender.SelectedIndexChanged += new System.EventHandler(this.cbbGender_SelectedIndexChanged);
             // 
             // guna2HtmlLabel3

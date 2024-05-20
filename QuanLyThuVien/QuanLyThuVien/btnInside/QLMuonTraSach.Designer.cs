@@ -510,7 +510,7 @@
             this.btnXoa.Location = new System.Drawing.Point(485, 108);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 40);
-            this.btnXoa.TabIndex = 35;
+            this.btnXoa.TabIndex = 18;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -527,7 +527,7 @@
             this.guna2Button2.Location = new System.Drawing.Point(317, 108);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(100, 40);
-            this.guna2Button2.TabIndex = 32;
+            this.guna2Button2.TabIndex = 17;
             this.guna2Button2.Text = "Sửa";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
@@ -562,7 +562,7 @@
             this.tablePT.RowHeadersWidth = 51;
             this.tablePT.RowTemplate.Height = 40;
             this.tablePT.Size = new System.Drawing.Size(744, 314);
-            this.tablePT.TabIndex = 31;
+            this.tablePT.TabIndex = 19;
             this.tablePT.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             this.tablePT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
             this.tablePT.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -599,7 +599,7 @@
             this.btnHienThi.Location = new System.Drawing.Point(158, 108);
             this.btnHienThi.Name = "btnHienThi";
             this.btnHienThi.Size = new System.Drawing.Size(100, 40);
-            this.btnHienThi.TabIndex = 30;
+            this.btnHienThi.TabIndex = 16;
             this.btnHienThi.Text = "Hiển thị";
             this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
             // 

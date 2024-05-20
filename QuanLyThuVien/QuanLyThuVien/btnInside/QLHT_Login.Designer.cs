@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnSuaMK = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnShow = new Guna.UI2.WinForms.Guna2Button();
             this.dataTableQLHT = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSuaMK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableQLHT)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,40 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(755, 497);
             this.guna2CustomGradientPanel1.TabIndex = 0;
             // 
+            // btnSuaMK
+            // 
+            this.btnSuaMK.BorderRadius = 5;
+            this.btnSuaMK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaMK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaMK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSuaMK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSuaMK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(76)))), ((int)(((byte)(66)))));
+            this.btnSuaMK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSuaMK.ForeColor = System.Drawing.Color.White;
+            this.btnSuaMK.Location = new System.Drawing.Point(315, 75);
+            this.btnSuaMK.Name = "btnSuaMK";
+            this.btnSuaMK.Size = new System.Drawing.Size(156, 35);
+            this.btnSuaMK.TabIndex = 2;
+            this.btnSuaMK.Text = "Đổi thông tin tài khoản";
+            this.btnSuaMK.Click += new System.EventHandler(this.btnSuaMK_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BorderRadius = 5;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(73)))));
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(571, 75);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(99, 35);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // btnShow
             // 
             this.btnShow.BorderRadius = 5;
@@ -66,7 +100,7 @@
             this.btnShow.Location = new System.Drawing.Point(129, 75);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(99, 35);
-            this.btnShow.TabIndex = 2;
+            this.btnShow.TabIndex = 1;
             this.btnShow.Text = "Hiển thị";
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
@@ -101,7 +135,7 @@
             this.dataTableQLHT.RowHeadersWidth = 51;
             this.dataTableQLHT.RowTemplate.Height = 30;
             this.dataTableQLHT.Size = new System.Drawing.Size(700, 317);
-            this.dataTableQLHT.TabIndex = 1;
+            this.dataTableQLHT.TabIndex = 4;
             this.dataTableQLHT.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             this.dataTableQLHT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
             this.dataTableQLHT.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -138,40 +172,6 @@
             this.label1.Size = new System.Drawing.Size(546, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH SÁCH TÀI KHOẢN TRONG HỆ THỐNG";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BorderRadius = 5;
-            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(73)))));
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(571, 75);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(99, 35);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSuaMK
-            // 
-            this.btnSuaMK.BorderRadius = 5;
-            this.btnSuaMK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSuaMK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSuaMK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSuaMK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSuaMK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(76)))), ((int)(((byte)(66)))));
-            this.btnSuaMK.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSuaMK.ForeColor = System.Drawing.Color.White;
-            this.btnSuaMK.Location = new System.Drawing.Point(315, 75);
-            this.btnSuaMK.Name = "btnSuaMK";
-            this.btnSuaMK.Size = new System.Drawing.Size(156, 35);
-            this.btnSuaMK.TabIndex = 4;
-            this.btnSuaMK.Text = "Đổi thông tin tài khoản";
-            this.btnSuaMK.Click += new System.EventHandler(this.btnSuaMK_Click);
             // 
             // QLHT_Login
             // 

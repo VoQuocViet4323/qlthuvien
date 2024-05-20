@@ -97,7 +97,6 @@ namespace QuanLyThuVien
             btnHome.Enabled = true;
             btnQuanLySach.Enabled = true;
             btnDanhMuc.Enabled = true;
-            btnQuanLyPhieu.Enabled = true;
             btnDocGia.Enabled = true;
             btnThongKe.Enabled = true;
             btnLogout.Enabled = true;

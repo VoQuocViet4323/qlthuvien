@@ -60,7 +60,7 @@ namespace QuanLyThuVien
                 }
                 else if (txtPassword.Text != txtConfirm.Text)
                 {
-                    MessageBox.Show("Mật khẩu không trùng nhau!");
+                    MessageBox.Show("Mật khẩu không trùng khớp, Vui lòng nhập lại!");
                     return;
                 }
 
