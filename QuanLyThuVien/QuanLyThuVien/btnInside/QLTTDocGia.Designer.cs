@@ -233,7 +233,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtTimKiem.PlaceholderText = "Nhập mã độc giả tại đây...";
+            this.txtTimKiem.PlaceholderText = "Nhập mã độc giả, tên độc giả tại đây...";
             this.txtTimKiem.SelectedText = "";
             this.txtTimKiem.Size = new System.Drawing.Size(265, 30);
             this.txtTimKiem.TabIndex = 1;

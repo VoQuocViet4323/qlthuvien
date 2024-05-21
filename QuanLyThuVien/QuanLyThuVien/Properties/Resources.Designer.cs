@@ -103,6 +103,16 @@ namespace QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_upload_image {
+            get {
+                object obj = ResourceManager.GetObject("icon-upload-image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGL_THUVIEN {
             get {
                 object obj = ResourceManager.GetObject("LOGL-THUVIEN", resourceCulture);

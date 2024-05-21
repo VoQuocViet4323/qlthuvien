@@ -60,3 +60,4 @@ C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\Qua
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLTTDocGia.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.btnOutside.AddDocGia.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.btnOutside.SuaDocGia.resources
+C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.test.resources

@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using Image = System.Drawing.Image;
 
 namespace QuanLyThuVien
 {
@@ -20,6 +22,8 @@ namespace QuanLyThuVien
         public QLSach()
         {
             InitializeComponent();
+            // Thêm các items vào ComboBox khi form được tải lên
+            LoadStatus();
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -65,34 +69,39 @@ namespace QuanLyThuVien
         private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         private void btnShow_Click(object sender, EventArgs e)
         {
-            try
+            show();
+        }
+
+
+        public List<string> GetAllStatus()
+        {
+            List<string> statusList = new List<string>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                // Tạo kết nối SQL
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                string query = "SELECT DISTINCT TRANGTHAI FROM QUANLYSACH";
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    // Mở kết nối
                     connection.Open();
-
-                    // Tạo câu truy vấn SQL để lấy dữ liệu từ bảng
-                    string query = "SELECT * FROM QUANLYSACH";
-
-                    // Tạo đối tượng SqlDataAdapter để lấy dữ liệu từ câu truy vấn
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        // Tạo đối tượng DataTable để lưu trữ dữ liệu từ bảng
-                        DataTable dataTable = new DataTable();
-
-                        // Đổ dữ liệu từ SqlDataAdapter vào DataTable
-                        adapter.Fill(dataTable);
-
-                        // Gán DataTable làm nguồn dữ liệu cho DataGridView
-                        tableTTSach.DataSource = dataTable;
+                        while (reader.Read())
+                        {
+                            string status = reader["TRANGTHAI"].ToString();
+                            statusList.Add(status);
+                        }
                     }
                 }
             }
-            catch (Exception ex)
+
+            return statusList;
+        }
+        private void LoadStatus()
+        {
+            List<string> statuses = GetAllStatus();
+            cbbTrangThai.Items.Clear();
+            foreach (string status in statuses)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                cbbTrangThai.Items.Add(status);
             }
         }
 
@@ -107,7 +116,7 @@ namespace QuanLyThuVien
                     connection.Open();
 
                     // Tạo câu truy vấn SQL để lấy dữ liệu từ bảng
-                    string query = "SELECT * FROM QUANLYSACH";
+                    string query = "SELECT MASACH as ID, TENSACH as 'Tên Sách', LOAISACH as 'Loại Sách',  NXB as NXB, GIA as Giá, TENTACGIA as 'Tác Giả', SOLUONG as SL, TRANGTHAI as TT, HINHANH as 'Hình ảnh' FROM QUANLYSACH";
 
                     // Tạo đối tượng SqlDataAdapter để lấy dữ liệu từ câu truy vấn
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
@@ -155,7 +164,7 @@ namespace QuanLyThuVien
                 }
 
                 // Lấy mã phiếu mượn của hàng được chọn
-                string maSach = tableTTSach.SelectedRows[0].Cells["MASACH"].Value.ToString();
+                string maSach = tableTTSach.SelectedRows[0].Cells[0].Value.ToString();
 
                 string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -222,15 +231,35 @@ namespace QuanLyThuVien
                     MessageBox.Show("Vui lòng nhập Tên tác giả!");
                     return;
                 }
-                
-                string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                else if (string.IsNullOrEmpty(txtSoLuong.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập Số lượng!");
+                    return;
+                }
+                else if (string.IsNullOrEmpty(cbbTrangThai.Text))
+                {
+                    MessageBox.Show("Vui lòng chọn Trạng thái sách!");
+                    return;
+                }
 
+
+                byte[] imageBytes = null;
+
+                // Chuyển đổi hình ảnh từ PictureBox thành mảng byte
+                if (imageBook.Image != null)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        imageBook.Image.Save(ms, imageBook.Image.RawFormat);
+                        imageBytes = ms.ToArray();
+                    }
+                }
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     // Mở kết nối
                     connection.Open();
                     // Thực hiện truy vấn UPDATE để cập nhật thông tin của phiếu mượn
-                    string updateQuery = "UPDATE QUANLYSACH SET TENSACH = @tensach, LOAISACH = @loaisach, NXB = @nxb, GIA = @gia, TENTACGIA = @tentacgia WHERE MASACH = @masach";
+                    string updateQuery = "UPDATE QUANLYSACH SET TENSACH = @tensach, LOAISACH = @loaisach, NXB = @nxb, GIA = @gia, TENTACGIA = @tentacgia, SOLUONG = @soluong, TRANGTHAI = @trangthai, HINHANH = @image WHERE MASACH = @masach";
 
                     using (SqlCommand command = new SqlCommand(updateQuery, connection))
                     {
@@ -240,6 +269,9 @@ namespace QuanLyThuVien
                         command.Parameters.AddWithValue("@nxb", txtNXB.Text);
                         command.Parameters.AddWithValue("@gia", txtGia.Text);
                         command.Parameters.AddWithValue("@tentacgia", txtTenTG.Text);
+                        command.Parameters.AddWithValue("@soluong", txtSoLuong.Text);
+                        command.Parameters.AddWithValue("@trangthai", cbbTrangThai.Text);
+                        command.Parameters.AddWithValue("@image", imageBytes == null ? (object)DBNull.Value : imageBytes);
                         // Thực hiện truy vấn UPDATE
                         command.ExecuteNonQuery();
                     }
@@ -257,7 +289,7 @@ namespace QuanLyThuVien
         {
             try
             {
-                //kiểm tra các textbox đã nhập chưa!
+                // Kiểm tra các textbox đã nhập chưa!
                 if (string.IsNullOrEmpty(txtMaSach.Text))
                 {
                     MessageBox.Show("Vui lòng nhập Mã sách!");
@@ -288,11 +320,35 @@ namespace QuanLyThuVien
                     MessageBox.Show("Vui lòng nhập Tên tác giả!");
                     return;
                 }
+                else if (string.IsNullOrEmpty(txtSoLuong.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập Số lượng!");
+                    return;
+                }
+                else if (string.IsNullOrEmpty(cbbTrangThai.Text))
+                {
+                    MessageBox.Show("Vui lòng chọn Trạng thái sách!");
+                    return;
+                }
+
+                byte[] imageBytes = null;
+
+                // Chuyển đổi hình ảnh từ PictureBox thành mảng byte
+                if (imageBook.Image != null)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        imageBook.Image.Save(ms, imageBook.Image.RawFormat);
+                        imageBytes = ms.ToArray();
+                    }
+                }
+
                 string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    //mở kết nối
+                    // Mở kết nối
                     connection.Open();
+
                     // Kiểm tra xem mã sách đã tồn tại hay chưa
                     string checkQuery = "SELECT COUNT(*) FROM QUANLYSACH WHERE MASACH = @masach";
                     using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
@@ -305,8 +361,9 @@ namespace QuanLyThuVien
                             return;
                         }
                     }
+
                     // Thêm dữ liệu vào cơ sở dữ liệu
-                    string insertQuery = "INSERT INTO QUANLYSACH(MASACH, TENSACH, LOAISACH, NXB, GIA, TENTACGIA) VALUES (@masach, @tensach, @loaisach, @nxb, @gia, @tentacgia)";
+                    string insertQuery = "INSERT INTO QUANLYSACH(MASACH, TENSACH, LOAISACH, NXB, GIA, TENTACGIA, SOLUONG, TRANGTHAI, HINHANH) VALUES (@masach, @tensach, @loaisach, @nxb, @gia, @tentacgia, @soluong, @trangthai, @image)";
                     using (SqlCommand command = new SqlCommand(insertQuery, connection))
                     {
                         command.Parameters.AddWithValue("@masach", txtMaSach.Text);
@@ -315,9 +372,15 @@ namespace QuanLyThuVien
                         command.Parameters.AddWithValue("@nxb", txtNXB.Text);
                         command.Parameters.AddWithValue("@gia", txtGia.Text);
                         command.Parameters.AddWithValue("@tentacgia", txtTenTG.Text);
-                        // Thực hiện truy vấn UPDATE
+                        command.Parameters.AddWithValue("@soluong", txtSoLuong.Text);
+                        command.Parameters.AddWithValue("@trangthai", cbbTrangThai.Text);
+                        command.Parameters.AddWithValue("@image", imageBytes == null ? (object)DBNull.Value : imageBytes);
+
+                        // Thực hiện truy vấn INSERT
                         command.ExecuteNonQuery();
                     }
+
+                    // Hiển thị lại dữ liệu
                     show();
                 }
             }
@@ -346,12 +409,25 @@ namespace QuanLyThuVien
                     DataGridViewRow row = tableTTSach.Rows[e.RowIndex];
 
                     // Kiểm tra giá trị của từng ô trước khi chuyển đổi
-                    string maSach = row.Cells["MASACH"].Value != DBNull.Value ? row.Cells["MASACH"].Value.ToString() : string.Empty;
-                    string tenSach = row.Cells["TENSACH"].Value != DBNull.Value ? row.Cells["TENSACH"].Value.ToString() : string.Empty;
-                    string loaiSach = row.Cells["LOAISACH"].Value != DBNull.Value ? row.Cells["LOAISACH"].Value.ToString() : string.Empty;
-                    string nxb = row.Cells["NXB"].Value != DBNull.Value ? row.Cells["NXB"].Value.ToString() : string.Empty;
-                    string gia = row.Cells["GIA"].Value != DBNull.Value ? row.Cells["GIA"].Value.ToString() : string.Empty;
-                    string tenTG = row.Cells["TENTACGIA"].Value != DBNull.Value ? row.Cells["TENTACGIA"].Value.ToString() : string.Empty;
+                    string maSach = row.Cells[0].Value.ToString();
+                    string tenSach = row.Cells[1].Value.ToString();
+                    string loaiSach = row.Cells[2].Value.ToString();
+                    string nxb = row.Cells[3].Value.ToString();
+                    string gia = row.Cells[4].Value.ToString();
+                    string tenTG = row.Cells[5].Value.ToString();
+                    string soluong = row.Cells[6].Value.ToString();
+                    string trangthai = row.Cells[7].Value.ToString();
+                    // Lấy dữ liệu hình ảnh từ cơ sở dữ liệu và chuyển đổi thành Image
+                    byte[] hinhanh = row.Cells[8].Value as byte[];
+                    Image image = null;
+
+                    if (hinhanh != null && hinhanh.Length > 0)
+                    {
+                        using (MemoryStream ms = new MemoryStream(hinhanh))
+                        {
+                            image = Image.FromStream(ms);
+                        }
+                    }
 
                     // Hiển thị giá trị của các ô trong các TextBox hoặc ComboBox tương ứng
                     txtMaSach.Text = maSach;
@@ -360,7 +436,9 @@ namespace QuanLyThuVien
                     txtNXB.Text = nxb;
                     txtGia.Text = gia;
                     txtTenTG.Text = tenTG;
-
+                    txtSoLuong.Text = soluong;
+                    cbbTrangThai.SelectedItem = trangthai;
+                    imageBook.Image = image; // Gán hình ảnh cho PictureBox
                     //txtMaSach.Enabled = false;
                 }
             }
@@ -378,6 +456,10 @@ namespace QuanLyThuVien
             txtNXB.Text = "";
             txtGia.Text = "";
             txtTenTG.Text = "";
+            txtSoLuong.Text = "";
+            cbbTrangThai.SelectedItem = "";
+            imageBook.Image = null;
+            LoadStatus();
         }
 
         private bool isMaSachEdited = true;
@@ -413,6 +495,33 @@ namespace QuanLyThuVien
         private void txtLoaiSach_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbbTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnChooseImage_Click(object sender, EventArgs e)
+        {
+            // Tạo một OpenFileDialog để chọn file ảnh
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Chỉ cho phép chọn các file ảnh
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif;*.webp";
+
+            // Hiển thị hộp thoại OpenFileDialog và kiểm tra xem người dùng đã chọn một file chưa
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Lấy đường dẫn file mà người dùng đã chọn
+                string filePath = openFileDialog.FileName;
+
+                // Hiển thị hình ảnh trong PictureBox
+                imageBook.Image = Image.FromFile(filePath);
+
+                // Thiết lập chế độ hiển thị của PictureBox để phù hợp với kích thước của PictureBox
+                imageBook.SizeMode = PictureBoxSizeMode.Zoom;
+            }
         }
     }
 }

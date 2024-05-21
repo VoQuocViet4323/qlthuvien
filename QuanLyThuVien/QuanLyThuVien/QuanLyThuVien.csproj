@@ -109,6 +109,12 @@
     <Compile Include="btnOutside\ThayDoiThongTinTK.Designer.cs">
       <DependentUpon>ThayDoiThongTinTK.cs</DependentUpon>
     </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateTTNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     <EmbeddedResource Include="btnOutside\ThayDoiThongTinTK.resx">
       <DependentUpon>ThayDoiThongTinTK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateTTNV.resx">
       <DependentUpon>UpdateTTNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +302,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icon-upload-image.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

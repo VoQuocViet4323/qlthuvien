@@ -191,7 +191,7 @@ namespace QuanLyThuVien
             // Tạo câu truy vấn SQL sử dụng LIKE để tìm kiếm dựa trên giá trị MAPT
             string searchQuery = @"SELECT * 
                                   FROM QUANLYDOCGIA 
-                                  WHERE MADOCGIA LIKE '%' + @id + '%'";
+                                  WHERE MADOCGIA LIKE '%' + @id + '%' OR TEN LIKE '%' + @hoten + '%'";
 
             // Tạo và mở kết nối đến cơ sở dữ liệu
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -203,6 +203,8 @@ namespace QuanLyThuVien
                 {
                     // Đảm bảo tham số @id có kiểu dữ liệu phù hợp với trường MAPT
                     command.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = keyword;
+                    command.Parameters.AddWithValue("@hoten", SqlDbType.NVarChar).Value = keyword;
+
 
                     // Tạo DataAdapter và DataTable để lưu trữ kết quả truy vấn
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(command);

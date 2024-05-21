@@ -7,7 +7,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -396,14 +398,46 @@ namespace QuanLyThuVien
                         }
                     }
 
-                    // Thêm dữ liệu vào cơ sở dữ liệu
+                    // Thêm dữ liệu vào cơ sở dữ liệu và lấy mã phiếu trả
                     string insertQuery = @" INSERT INTO PHIEUMUON(MAPM, MADOCGIA, MASACH, MATHUTHU, NGAYMUON, NGAYHENTRA, TRANGTHAI) 
-                                            VALUES (@maPM, @madocgia, @masach, @mathuthu, @ngaymuon, @ngayhentra, @trangthai) 
-                                            DECLARE @maPT NVARCHAR(20)
-                                            SET @maPT = LEFT(CAST(NEWID() AS NVARCHAR(36)), 5) 
-                                            INSERT INTO PHIEUTRA(MAPT, MAPM, MADOCGIA, MASACH, MATHUTHU, NGAYTRA, PHITREHAN, TRANGTHAI) 
-                                            VALUES (@maPT, @maPM,@madocgia, @masach, @mathuthu, @ngayhentra, 0, N'Đã trả')
-                                          ";
+                                VALUES (@maPM, @madocgia, @masach, @mathuthu, @ngaymuon, @ngayhentra, @trangthai) 
+                                DECLARE @maPT NVARCHAR(20)
+                                SET @maPT = LEFT(CAST(NEWID() AS NVARCHAR(36)), 5)
+                                INSERT INTO PHIEUTRA(MAPT, MAPM, MADOCGIA, MASACH, MATHUTHU, NGAYTRA, PHITREHAN, TRANGTHAI) 
+                                VALUES (@maPT, @maPM, @madocgia, @masach, @mathuthu, @ngayhentra, 0, N'Đang mượn')
+                                
+                                -- Trả về mã phiếu trả vừa được tạo ra
+                                SELECT @maPT AS NewMapt;
+
+                                -- Giảm số lượng sách
+                                UPDATE QUANLYSACH SET SOLUONG = SOLUONG - 1 WHERE MASACH = @masach;
+
+                                -- Cập nhật trạng thái sách nếu số lượng còn lại là 0
+                                IF (SELECT SOLUONG FROM QUANLYSACH WHERE MASACH = @masach) = 0
+                                BEGIN
+                                    UPDATE QUANLYSACH SET TRANGTHAI = N'Đã hết' WHERE MASACH = @masach;
+                                END;
+                              ";
+                    string masach = cbMaSach.Text;
+                    int soluongSachConLai = 0;
+                    string query = "SELECT SOLUONG FROM QUANLYSACH WHERE MASACH = @masach";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@masach", masach);
+                        object result = command.ExecuteScalar();
+                        if (result != null && result != DBNull.Value)
+                        {
+                            soluongSachConLai = Convert.ToInt32(result);
+                        }
+                        // Kiểm tra số lượng sách còn lại
+                        if (soluongSachConLai <= 0)
+                        {
+                            MessageBox.Show("Hiện tại không còn sách để mượn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return; // Ngăn chặn quá trình thêm dữ liệu tiếp theo
+                        }
+                    }
+
+                    string newMapt = null;
                     using (SqlCommand command = new SqlCommand(insertQuery, connection))
                     {
                         command.Parameters.AddWithValue("@maPM", txtMaPhieu.Text);
@@ -413,7 +447,42 @@ namespace QuanLyThuVien
                         command.Parameters.AddWithValue("@ngaymuon", dateNgayMuon.Value);
                         command.Parameters.AddWithValue("@ngayhentra", dateNgayTra.Value);
                         command.Parameters.AddWithValue("@trangthai", "Đang mượn");
-                        command.ExecuteNonQuery();
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                newMapt = reader["NewMapt"].ToString();
+                            }
+                        }
+                    }
+
+                    // Kiểm tra và cập nhật phí trễ hạn nếu cần
+                    if (newMapt != null)
+                    {
+                        DateTime ngayTraDuKien = dateNgayTra.Value;
+                        DateTime ngayTraThucTe = DateTime.Now;
+
+                        if (ngayTraThucTe > ngayTraDuKien)
+                        {
+                            TimeSpan soNgayTre = ngayTraThucTe - ngayTraDuKien;
+                            int soNgayTreInt = (int)soNgayTre.TotalDays;
+
+                            // Tính phí trễ dựa trên số ngày trễ và mức phạt của bạn
+                            int phiTreHan = soNgayTreInt * 10; // Mỗi ngày trễ phạt 10 tiền
+
+                            // Hiển thị thông báo về phí trễ
+                            MessageBox.Show($"Quá hạn trả sách {soNgayTreInt} ngày. Phí trễ là {phiTreHan} tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Cập nhật cột PHITREHAN trong bảng PHIEUTRA
+                            string updateQuery = "UPDATE PHIEUTRA SET PHITREHAN = @phiTreHan WHERE MAPT = @maPT";
+                            using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                            {
+                                command.Parameters.AddWithValue("@phiTreHan", phiTreHan);
+                                command.Parameters.AddWithValue("@maPT", newMapt);
+                                command.ExecuteNonQuery();
+                            }
+                        }
                     }
                 }
 
@@ -730,7 +799,7 @@ namespace QuanLyThuVien
                 if (ngayTra < ngayMuon)
                 {
                     // Hiển thị thông báo lỗi
-                    MessageBox.Show("Ngày trả phải sau ngày mượn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ngày trả phải sau ngày mượn.");
                     isUpdatingDate = true;
                     // Gán lại ngày trả bằng ngày mượn
                     dateNgayTra.Value = ngayMuon;
@@ -748,23 +817,50 @@ namespace QuanLyThuVien
 
         private void dateNgayMuon_ValueChanged(object sender, EventArgs e)
         {
-            if (isUpdatingDate)
-                return;
+            //if (isUpdatingDate)
+            //    return;
 
+            //this.Invoke(new Action(() =>
+            //{
+            //    try
+            //    {
+            //        isUpdatingDate = true;
+
+            //        // Lấy giá trị ngày mượn và ngày trả
+            //        DateTime ngayMuon = dateNgayMuon.Value;
+            //        DateTime ngayTra = dateNgayTra.Value;
+
+            //        // Kiểm tra nếu ngày mượn lớn hơn ngày trả
+            //        if (ngayMuon > ngayTra)
+            //        {
+            //            MessageBox.Show("Ngày trả phải sau ngày mượn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //            dateNgayMuon.Value = ngayTra;
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //    finally
+            //    {
+            //        isUpdatingDate = false; // Đặt lại isUpdatingDate về false sau khi thay đổi giá trị
+            //        this.Activate(); // Đảm bảo form hiện tại được kích hoạt lại
+            //    }
+            //}));
+        }
+        private void CheckDates()
+        {
             // Lấy giá trị ngày mượn và ngày trả
             DateTime ngayMuon = dateNgayMuon.Value;
             DateTime ngayTra = dateNgayTra.Value;
 
-            // Kiểm tra nếu ngày mượn lớn hơn ngày trả
-            if (ngayMuon > ngayTra)
+            // Kiểm tra nếu ngày mượn lớn hơn hoặc bằng ngày trả
+            if (ngayMuon >= ngayTra)
             {
-                MessageBox.Show("Ngày trả phải sau ngày mượn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isUpdatingDate = true;
-                dateNgayMuon.Value = DateTime.Today;
-                isUpdatingDate = false;
+                MessageBox.Show("Ngày mượn phải trước ngày trả.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dateNgayMuon.Focus(); // Focus vào DateTimePicker để người dùng có thể sửa ngày mượn
             }
         }
-
         private void dateNgayTra_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -780,5 +876,104 @@ namespace QuanLyThuVien
         {
             UpdateRecordCountLabel();
         }
+
+        private void btnDaTra_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(selectedMapt))
+                {
+                    MessageBox.Show("Vui lòng chọn một phiếu trả hợp lệ!");
+                    return;
+                }
+
+                string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    // Mở kết nối
+                    connection.Open();
+
+                    // Truy vấn để lấy mã sách (MASACH) liên quan đến phiếu trả
+                    string getMasachQuery = "SELECT MASACH FROM PHIEUTRA WHERE MAPT = @maPT";
+                    string masach = null;
+                    using (SqlCommand getMasachCommand = new SqlCommand(getMasachQuery, connection))
+                    {
+                        getMasachCommand.Parameters.AddWithValue("@maPT", selectedMapt);
+                        object result = getMasachCommand.ExecuteScalar();
+                        if (result != null)
+                        {
+                            masach = result.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy mã sách cho phiếu trả này.");
+                            return;
+                        }
+                    }
+
+                    // Cập nhật trạng thái phiếu mượn thành "Đã Trả"
+                    string updateQuery = "UPDATE PHIEUTRA SET TRANGTHAI = N'Đã Trả' WHERE MAPT = @maPT";
+                    using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@maPT", selectedMapt);
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Cập nhật trạng thái thành 'Đã Trả' thành công!");
+
+                            // Cập nhật lại DataGridView
+                            foreach (DataGridViewRow row in tablePT.Rows)
+                            {
+                                if (row.Cells["MAPT"].Value.ToString() == selectedMapt)
+                                {
+                                    row.Cells["TRANGTHAI"].Value = "Đã Trả";
+                                    break;
+                                }
+                            }
+
+                            // Tăng số lượng sách lên 1 trong bảng QUANLYSACH
+                            string updateSoluongQuery = "UPDATE QUANLYSACH SET SOLUONG = SOLUONG + 1 WHERE MASACH = @masach";
+                            using (SqlCommand updateSoluongCommand = new SqlCommand(updateSoluongQuery, connection))
+                            {
+                                updateSoluongCommand.Parameters.AddWithValue("@masach", masach);
+                                updateSoluongCommand.ExecuteNonQuery();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy phiếu trả với mã này.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật trạng thái: " + ex.Message);
+            }
+        }
+
+
+        private string selectedMapt; 
+        private void tablePT_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = tablePT.Rows[e.RowIndex];
+                // Giả sử cột mã phiếu mượn là cột đầu tiên
+                selectedMapt = row.Cells["MAPT"].Value.ToString();
+            }
+        }
+
+        private void dateNgayMuon_CloseUp(object sender, EventArgs e)
+        {
+            CheckDates();
+        }
+
+        private void dateNgayTra_CloseUp(object sender, EventArgs e)
+        {
+            CheckDates();
+        }
+
     }
 }
