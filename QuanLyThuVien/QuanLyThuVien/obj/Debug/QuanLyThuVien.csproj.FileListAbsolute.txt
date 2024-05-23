@@ -40,7 +40,6 @@ C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\Qua
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UpdateTTNV.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.BaoCaoDocGia.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.BaoCaoSach.resources
-C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.TimKiemDocGia.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UpdateSach.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UpdateTacGia.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UpdateNXB.resources
@@ -61,3 +60,4 @@ C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\Qua
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.btnOutside.AddDocGia.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.btnOutside.SuaDocGia.resources
 C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.test.resources
+C:\Users\admin\OneDrive\Documents\Visual Studio 2022\qlthuvien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.BaoCaoThongKe.resources

@@ -37,12 +37,16 @@
             this.btnShow = new Guna.UI2.WinForms.Guna2Button();
             this.dataTableQLHT = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtFind = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableQLHT)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.txtFind);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnSuaMK);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnXoa);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnShow);
@@ -81,7 +85,7 @@
             this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(73)))));
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(571, 75);
+            this.btnXoa.Location = new System.Drawing.Point(550, 75);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(99, 35);
             this.btnXoa.TabIndex = 3;
@@ -128,13 +132,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataTableQLHT.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataTableQLHT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
-            this.dataTableQLHT.Location = new System.Drawing.Point(27, 156);
+            this.dataTableQLHT.Location = new System.Drawing.Point(12, 177);
             this.dataTableQLHT.Name = "dataTableQLHT";
             this.dataTableQLHT.ReadOnly = true;
             this.dataTableQLHT.RowHeadersVisible = false;
             this.dataTableQLHT.RowHeadersWidth = 51;
             this.dataTableQLHT.RowTemplate.Height = 30;
-            this.dataTableQLHT.Size = new System.Drawing.Size(700, 317);
+            this.dataTableQLHT.Size = new System.Drawing.Size(731, 317);
             this.dataTableQLHT.TabIndex = 4;
             this.dataTableQLHT.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             this.dataTableQLHT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
@@ -173,6 +177,41 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH SÁCH TÀI KHOẢN TRONG HỆ THỐNG";
             // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(78)))), ((int)(((byte)(128)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(107, 133);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(152, 22);
+            this.guna2HtmlLabel1.TabIndex = 5;
+            this.guna2HtmlLabel1.Text = "Tìm kiếm tài khoản";
+            // 
+            // txtFind
+            // 
+            this.txtFind.BackColor = System.Drawing.Color.Transparent;
+            this.txtFind.BorderRadius = 10;
+            this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFind.DefaultText = "";
+            this.txtFind.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFind.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFind.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFind.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFind.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFind.Location = new System.Drawing.Point(270, 126);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.PasswordChar = '\0';
+            this.txtFind.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtFind.PlaceholderText = "Vui lòng nhập tên tài khoản tại đây...";
+            this.txtFind.SelectedText = "";
+            this.txtFind.Size = new System.Drawing.Size(322, 30);
+            this.txtFind.TabIndex = 6;
+            this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
+            // 
             // QLHT_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,5 +235,7 @@
         private Guna.UI2.WinForms.Guna2Button btnShow;
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2Button btnSuaMK;
+        private Guna.UI2.WinForms.Guna2TextBox txtFind;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

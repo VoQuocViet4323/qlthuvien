@@ -207,5 +207,41 @@ namespace QuanLyThuVien
                 MessageBox.Show("Fix: " + ex.Message, "Error");
             }
         }
+        private void SearchAndUpdateDataGridView()
+        {
+            string keyword = txtFind.Text.Trim(); // Lấy giá trị từ TextBox và loại bỏ các khoảng trắng thừa
+
+            // Tạo câu truy vấn SQL sử dụng LIKE để tìm kiếm dựa trên giá trị MAPT
+            string searchQuery = @"SELECT * 
+                                  FROM login 
+                                  WHERE username LIKE '%' + @id + '%'";
+
+            // Tạo và mở kết nối đến cơ sở dữ liệu
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Tạo đối tượng SqlCommand
+                using (SqlCommand command = new SqlCommand(searchQuery, connection))
+                {
+                    // Đảm bảo tham số @id có kiểu dữ liệu phù hợp với trường MAPT
+                    command.Parameters.AddWithValue("@id", SqlDbType.NVarChar).Value = keyword;
+
+                    // Tạo DataAdapter và DataTable để lưu trữ kết quả truy vấn
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+
+                    // Đổ dữ liệu từ SqlDataAdapter vào DataTable
+                    dataAdapter.Fill(dataTable);
+
+                    // Hiển thị dữ liệu trong DataTable trên DataGridView
+                    dataTableQLHT.DataSource = dataTable;
+                }
+            }
+        }
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            SearchAndUpdateDataGridView();
+        }
     }
 }

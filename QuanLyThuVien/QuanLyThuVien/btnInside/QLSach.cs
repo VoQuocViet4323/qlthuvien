@@ -523,5 +523,59 @@ namespace QuanLyThuVien
                 imageBook.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchAndUpdateDataGridView()
+        {
+            string keyword = txtFind.Text.Trim(); // Lấy giá trị từ TextBox và loại bỏ các khoảng trắng thừa
+
+            // Tạo câu truy vấn SQL sử dụng LIKE để tìm kiếm dựa trên giá trị MAPT
+            string searchQuery = @" SELECT * 
+                                    FROM QUANLYSACH 
+                                    WHERE TENSACH LIKE '%' + @tensach + '%'
+                                    OR NXB LIKE '%' + @nxb + '%'
+                                    OR TENTACGIA LIKE '%' + @tentacgia + '%'";
+
+            // Tạo và mở kết nối đến cơ sở dữ liệu
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Tạo đối tượng SqlCommand
+                    using (SqlCommand command = new SqlCommand(searchQuery, connection))
+                    {
+                        // Đảm bảo tham số @id có kiểu dữ liệu phù hợp với trường MAPT
+                        command.Parameters.AddWithValue("@tensach", keyword);
+                        command.Parameters.AddWithValue("@nxb", keyword);
+                        command.Parameters.AddWithValue("@tentacgia", keyword);
+
+                        // Tạo DataAdapter và DataTable để lưu trữ kết quả truy vấn
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+
+                        // Đổ dữ liệu từ SqlDataAdapter vào DataTable
+                        dataAdapter.Fill(dataTable);
+
+                        // Hiển thị dữ liệu trong DataTable trên DataGridView
+                        tableTTSach.DataSource = dataTable;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            SearchAndUpdateDataGridView();
+        }
     }
 }

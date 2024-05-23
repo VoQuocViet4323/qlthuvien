@@ -157,7 +157,7 @@ namespace QuanLyThuVien
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new BaoCaoThongKe());
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)

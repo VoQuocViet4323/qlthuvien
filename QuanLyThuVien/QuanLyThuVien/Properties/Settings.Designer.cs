@@ -33,5 +33,16 @@ namespace QuanLyThuVien.Properties {
                 return ((string)(this["adminConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=PHANMEM;Integrated Security=True;Encrypt=True;Trust" +
+            "ServerCertificate=True")]
+        public string PHANMEMConnectionString {
+            get {
+                return ((string)(this["PHANMEMConnectionString"]));
+            }
+        }
     }
 }
