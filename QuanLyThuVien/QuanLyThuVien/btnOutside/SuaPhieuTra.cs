@@ -272,5 +272,10 @@ namespace QuanLyThuVien
         {
 
         }
+
+        private void dateTra_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

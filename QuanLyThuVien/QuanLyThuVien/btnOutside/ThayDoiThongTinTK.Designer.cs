@@ -136,8 +136,8 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(476, 0);
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Red;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(484, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 6;
@@ -210,7 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(521, 303);
+            this.ClientSize = new System.Drawing.Size(529, 289);
             this.Controls.Add(this.txtConfirm);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.guna2ControlBox1);

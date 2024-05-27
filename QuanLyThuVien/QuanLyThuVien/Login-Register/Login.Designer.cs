@@ -90,7 +90,7 @@
             this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(234, 453);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 23);
+            this.label6.Size = new System.Drawing.Size(116, 19);
             this.label6.TabIndex = 3;
             this.label6.Text = "Đăng ký ngay";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -102,7 +102,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(52, 453);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(216, 25);
+            this.label5.Size = new System.Drawing.Size(176, 20);
             this.label5.TabIndex = 23;
             this.label5.Text = "Bạn chưa có tài khoản?";
             // 
@@ -163,7 +163,7 @@
             this.txtpassword.ForeColor = System.Drawing.Color.White;
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Location = new System.Drawing.Point(106, 337);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '•';
             this.txtpassword.PlaceholderForeColor = System.Drawing.Color.White;
@@ -178,7 +178,7 @@
             this.txtusername.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.txtusername.BorderThickness = 3;
             this.txtusername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtusername.DefaultText = "vietdeptrai";
+            this.txtusername.DefaultText = "admin";
             this.txtusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -189,7 +189,7 @@
             this.txtusername.ForeColor = System.Drawing.Color.White;
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.Location = new System.Drawing.Point(106, 287);
-            this.txtusername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderForeColor = System.Drawing.Color.White;
@@ -227,7 +227,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(154, 205);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 40);
+            this.label4.Size = new System.Drawing.Size(83, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "Login";
             // 

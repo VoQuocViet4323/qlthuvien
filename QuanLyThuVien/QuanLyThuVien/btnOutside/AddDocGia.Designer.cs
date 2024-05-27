@@ -44,6 +44,7 @@
             this.cbbGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -51,7 +52,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(78)))), ((int)(((byte)(128)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(186, 12);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(186, 38);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(271, 26);
             this.guna2HtmlLabel1.TabIndex = 0;
@@ -61,7 +62,7 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(18, 71);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(18, 97);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(76, 20);
             this.guna2HtmlLabel2.TabIndex = 1;
@@ -71,7 +72,7 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(337, 121);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(337, 147);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(68, 20);
             this.guna2HtmlLabel4.TabIndex = 3;
@@ -81,7 +82,7 @@
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(47, 121);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(47, 147);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(47, 20);
             this.guna2HtmlLabel5.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(348, 71);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(348, 97);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(57, 20);
             this.guna2HtmlLabel6.TabIndex = 5;
@@ -101,7 +102,7 @@
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(61, 222);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(61, 248);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(33, 20);
             this.guna2HtmlLabel7.TabIndex = 6;
@@ -111,7 +112,7 @@
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(365, 174);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(365, 200);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(40, 20);
             this.guna2HtmlLabel8.TabIndex = 7;
@@ -128,7 +129,7 @@
             this.txtMaDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDG.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaDG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaDG.Location = new System.Drawing.Point(111, 67);
+            this.txtMaDG.Location = new System.Drawing.Point(111, 93);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.PasswordChar = '\0';
             this.txtMaDG.PlaceholderText = "";
@@ -147,7 +148,7 @@
             this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Location = new System.Drawing.Point(111, 118);
+            this.txtHoTen.Location = new System.Drawing.Point(111, 144);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
             this.txtHoTen.PlaceholderText = "";
@@ -166,7 +167,7 @@
             this.txtSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSDT.Location = new System.Drawing.Point(111, 217);
+            this.txtSDT.Location = new System.Drawing.Point(111, 243);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
@@ -185,7 +186,7 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(421, 168);
+            this.txtEmail.Location = new System.Drawing.Point(421, 194);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
@@ -204,7 +205,7 @@
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(111, 168);
+            this.txtAddress.Location = new System.Drawing.Point(111, 194);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
             this.txtAddress.PlaceholderText = "";
@@ -220,7 +221,7 @@
             this.dateNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgaySinh.ForeColor = System.Drawing.Color.White;
             this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateNgaySinh.Location = new System.Drawing.Point(421, 115);
+            this.dateNgaySinh.Location = new System.Drawing.Point(421, 141);
             this.dateNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgaySinh.Name = "dateNgaySinh";
@@ -239,7 +240,7 @@
             this.cbbGender.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbGender.ItemHeight = 30;
-            this.cbbGender.Location = new System.Drawing.Point(421, 61);
+            this.cbbGender.Location = new System.Drawing.Point(421, 87);
             this.cbbGender.Name = "cbbGender";
             this.cbbGender.Size = new System.Drawing.Size(140, 36);
             this.cbbGender.TabIndex = 5;
@@ -249,7 +250,7 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(46, 174);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(46, 200);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(48, 20);
             this.guna2HtmlLabel3.TabIndex = 15;
@@ -266,18 +267,30 @@
             this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(78)))), ((int)(((byte)(128)))));
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(461, 240);
+            this.btnThem.Location = new System.Drawing.Point(461, 266);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 40);
             this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Red;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(612, 1);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 16;
+            // 
             // AddDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 305);
+            this.ClientSize = new System.Drawing.Size(658, 320);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.cbbGender);
@@ -294,6 +307,7 @@
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddDocGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddDocGia";
@@ -321,5 +335,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbbGender;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2Button btnThem;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

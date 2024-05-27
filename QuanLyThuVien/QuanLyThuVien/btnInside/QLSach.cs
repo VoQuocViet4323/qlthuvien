@@ -22,7 +22,6 @@ namespace QuanLyThuVien
         public QLSach()
         {
             InitializeComponent();
-            // Thêm các items vào ComboBox khi form được tải lên
             LoadStatus();
         }
 
@@ -115,7 +114,7 @@ namespace QuanLyThuVien
                     // Mở kết nối
                     connection.Open();
 
-                    // Tạo câu truy vấn SQL để lấy dữ liệu từ bảng
+                    // Tạo câu truy vấn SQL để thay đổi các tên cột từ bảng
                     string query = "SELECT MASACH as ID, TENSACH as 'Tên Sách', LOAISACH as 'Loại Sách',  NXB as NXB, GIA as Giá, TENTACGIA as 'Tác Giả', SOLUONG as SL, TRANGTHAI as TT, HINHANH as 'Hình ảnh' FROM QUANLYSACH";
 
                     // Tạo đối tượng SqlDataAdapter để lấy dữ liệu từ câu truy vấn
@@ -448,6 +447,7 @@ namespace QuanLyThuVien
             }
         }
 
+        //nút clear
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             txtMaSach.Text = "";

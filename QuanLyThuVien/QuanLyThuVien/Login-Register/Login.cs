@@ -16,6 +16,7 @@ namespace QuanLyThuVien
 {
     public partial class Login : Form
     {
+        private string connectionString;
         private Form1 _form1;
 
         public Login(Form1 form1)
@@ -69,8 +70,7 @@ namespace QuanLyThuVien
         {
             try
             {
-                string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-
+                connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
                 // Kiểm tra trạng thái kết nối trước khi mở kết nối mới
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {

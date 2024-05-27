@@ -51,7 +51,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 127);
+            this.label1.Location = new System.Drawing.Point(44, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 18);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 195);
+            this.label2.Location = new System.Drawing.Point(23, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 18);
             this.label2.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(352, 127);
+            this.label3.Location = new System.Drawing.Point(316, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 18);
             this.label3.TabIndex = 2;
@@ -81,7 +81,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 259);
+            this.label4.Location = new System.Drawing.Point(56, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 18);
             this.label4.TabIndex = 3;
@@ -91,7 +91,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(368, 259);
+            this.label5.Location = new System.Drawing.Point(332, 235);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 18);
             this.label5.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(106, 325);
+            this.label6.Location = new System.Drawing.Point(70, 301);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 18);
             this.label6.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(355, 195);
+            this.label7.Location = new System.Drawing.Point(319, 171);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 18);
             this.label7.TabIndex = 6;
@@ -129,7 +129,7 @@
             this.txtMaPT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaPT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaPT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaPT.Location = new System.Drawing.Point(190, 119);
+            this.txtMaPT.Location = new System.Drawing.Point(154, 95);
             this.txtMaPT.Name = "txtMaPT";
             this.txtMaPT.PasswordChar = '\0';
             this.txtMaPT.PlaceholderText = "";
@@ -147,7 +147,7 @@
             this.cbbMaDG.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbMaDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbMaDG.ItemHeight = 30;
-            this.cbbMaDG.Location = new System.Drawing.Point(447, 119);
+            this.cbbMaDG.Location = new System.Drawing.Point(411, 95);
             this.cbbMaDG.Name = "cbbMaDG";
             this.cbbMaDG.Size = new System.Drawing.Size(117, 36);
             this.cbbMaDG.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -163,7 +163,7 @@
             this.cbbMaTT.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbMaTT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbMaTT.ItemHeight = 30;
-            this.cbbMaTT.Location = new System.Drawing.Point(190, 250);
+            this.cbbMaTT.Location = new System.Drawing.Point(154, 226);
             this.cbbMaTT.Name = "cbbMaTT";
             this.cbbMaTT.Size = new System.Drawing.Size(117, 36);
             this.cbbMaTT.TabIndex = 3;
@@ -178,7 +178,7 @@
             this.cbbMaSach.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbMaSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbMaSach.ItemHeight = 30;
-            this.cbbMaSach.Location = new System.Drawing.Point(447, 250);
+            this.cbbMaSach.Location = new System.Drawing.Point(411, 226);
             this.cbbMaSach.Name = "cbbMaSach";
             this.cbbMaSach.Size = new System.Drawing.Size(117, 36);
             this.cbbMaSach.TabIndex = 7;
@@ -190,13 +190,14 @@
             this.dateTra.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTra.ForeColor = System.Drawing.Color.White;
             this.dateTra.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTra.Location = new System.Drawing.Point(190, 316);
+            this.dateTra.Location = new System.Drawing.Point(154, 292);
             this.dateTra.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTra.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTra.Name = "dateTra";
             this.dateTra.Size = new System.Drawing.Size(219, 36);
             this.dateTra.TabIndex = 4;
             this.dateTra.Value = new System.DateTime(2024, 5, 11, 21, 52, 54, 484);
+            this.dateTra.ValueChanged += new System.EventHandler(this.dateTra_ValueChanged);
             // 
             // txtPhiTre
             // 
@@ -209,7 +210,7 @@
             this.txtPhiTre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhiTre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhiTre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhiTre.Location = new System.Drawing.Point(447, 185);
+            this.txtPhiTre.Location = new System.Drawing.Point(411, 161);
             this.txtPhiTre.Name = "txtPhiTre";
             this.txtPhiTre.PasswordChar = '\0';
             this.txtPhiTre.PlaceholderText = "";
@@ -227,7 +228,7 @@
             this.btnFix.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(78)))), ((int)(((byte)(128)))));
             this.btnFix.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnFix.ForeColor = System.Drawing.Color.White;
-            this.btnFix.Location = new System.Drawing.Point(447, 316);
+            this.btnFix.Location = new System.Drawing.Point(411, 292);
             this.btnFix.Name = "btnFix";
             this.btnFix.Size = new System.Drawing.Size(117, 36);
             this.btnFix.TabIndex = 8;
@@ -240,7 +241,7 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Red;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(631, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(540, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 15;
@@ -250,7 +251,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(78)))), ((int)(((byte)(128)))));
-            this.label8.Location = new System.Drawing.Point(110, 53);
+            this.label8.Location = new System.Drawing.Point(74, 29);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(454, 31);
             this.label8.TabIndex = 16;
@@ -267,7 +268,7 @@
             this.cbbMaPM.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbMaPM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbMaPM.ItemHeight = 30;
-            this.cbbMaPM.Location = new System.Drawing.Point(190, 185);
+            this.cbbMaPM.Location = new System.Drawing.Point(154, 161);
             this.cbbMaPM.Name = "cbbMaPM";
             this.cbbMaPM.Size = new System.Drawing.Size(117, 36);
             this.cbbMaPM.TabIndex = 2;
@@ -276,7 +277,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 431);
+            this.ClientSize = new System.Drawing.Size(584, 353);
             this.Controls.Add(this.cbbMaPM);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.guna2ControlBox1);
